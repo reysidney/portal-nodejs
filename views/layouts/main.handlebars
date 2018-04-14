@@ -6,40 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Starter Template | Home</title>
+    <title>Starter Template | {{{_sections.title}}}</title>
     <!-- app style -->
     <link href="/css/app.min.css" rel="stylesheet">
   </head>
 
   <body>
-
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Starter Template</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="{{{home}}}"><a href="/">Home</a></li>
-            <li class="{{{about}}}"><a href="/about">About</a></li>
-            <li class="{{{services}}}"><a href="/services">Services</a></li>
-            <li class="{{{contact}}}"><a href="/contact">Contact</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://www.google-plus.com"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    
+    {{> header }}
 
     {{{body}}}
 
@@ -63,13 +37,13 @@
       </div>
     </div>
 
-    <footer>
-      <div class="container">
-        <p>Copyright &copy; 2018 Starter Template</p>
-      </div>
-    </footer>
+    <% include footer.handlebars %>
 
     <!-- app script -->
     <script src="/js/app.min.js"></script>
+
+    <script>
+        {{{_sections.activeClass}}}
+    </script>
   </body>
 </html>

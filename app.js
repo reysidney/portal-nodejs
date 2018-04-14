@@ -16,9 +16,22 @@ var db = mongoose.connection;
 //Init App
 var app = express();
 
+//Init Handlebars
+var hbs = exphbs.create({
+    helpers: {
+        section: function(name, options){
+            if(!this._sections) this._sections = {};
+            this._sections[name] = options.fn(this);
+            return null;
+        }
+    },
+    defaultLayout: 'main',
+    partialsDir: ['views/components/']
+});
+
 //View Engine 
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs({defaultLayout:'main'}));
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 //BodyParser Middleware

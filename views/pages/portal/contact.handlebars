@@ -1,3 +1,11 @@
+{{#section 'title'}}
+    Contact
+{{/section}}
+
+{{#section 'activeClass'}}
+    $('.contact').addClass('active');
+{{/section}}
+
 <div class="title-bar">
     <div class="container">
         <h1>Contact</h1>
@@ -32,14 +40,7 @@
             </div>
 
             <div class="col-md-4">
-                <div class="list-group">
-                    <a href="#" class="list-group-item active text-center">Starter Template</a> 
-
-                    <a href="/" class="list-group-item">Home</a>
-                    <a href="/about" class="list-group-item {{{about}}}">About</a> 
-                    <a href="/services" class="list-group-item {{{services}}}">Services</a> 
-                    <a href="/contact" class="list-group-item {{{contact}}}">Contact</a>
-                </div>
+                {{> sidepanel }}
             </div>
         </div>
     </div>
