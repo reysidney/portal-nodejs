@@ -17,6 +17,9 @@ This project is used for making web projects
 
 ##Update Theme Main Color in _customVariables.scss
     $main-color
-    
+
 ## Compile CSS/JS
     gulp
+
+## Run Website
+    node app.js
