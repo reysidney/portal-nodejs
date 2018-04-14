@@ -1,4 +1,4 @@
-# Common Web Layout Project
+# Portal Project
 This project is used for making web projects
 
 ## Install NPM
