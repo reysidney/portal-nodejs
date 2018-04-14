@@ -1,21 +1,21 @@
 {
-  "name": "common-web-project",
+  "name": "portal-nodejs",
   "version": "1.0.0",
   "description": "This project will instruct me on how to add packages, libraries, etc",
-  "main": "public/index.html",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reysidney/common-web-project.git"
+    "url": "git+https://github.com/reysidney/portal-nodejs.git"
   },
   "author": "reysidney <rscarredo@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/reysidney/common-web-project/issues"
+    "url": "https://github.com/reysidney/portal-nodejs/issues"
   },
-  "homepage": "https://github.com/reysidney/common-web-project#readme",
+  "homepage": "https://github.com/reysidney/portal-nodejs#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.3",
