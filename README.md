@@ -15,20 +15,8 @@ This project is used for making web projects
     npm install
     bower install
 
-## Compile CSS/JS
-    gulp
-
-## Install Live Server
-    npm install -g live-server
-
-## RUN Live Server Default port = 8080
-    cd public
-    live-server
-or
-
-    live-server --port=8000 
-    
-to change port
-
 ##Update Theme Main Color in _customVariables.scss
     $main-color
+    
+## Compile CSS/JS
+    gulp
