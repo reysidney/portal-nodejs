@@ -1,43 +1,29 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Starter Template | {{{_sections.title}}}</title>
-    <!-- app style -->
-    <link href="/css/app.min.css" rel="stylesheet">
-  </head>
-
+        <title>{{{_sections.title}}} | Starter Template</title>
+        <!-- app style -->
+        <link href="/css/app.min.css" rel="stylesheet">
+    </head>
+    <script src = "/socket.io/socket.io.js"></script>
+   
+    <script>
+        var socket = io();
+    </script>
   <body>
     
     {{> header }}
 
     {{{body}}}
 
-    <div class="section-c">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <h2>Subscribe to our newsletter!</h2>
-            <br>
-            <p class="lead">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <hr>
-            <form>
-              <input type="text" class="form-control input-lg" placeholder="Enter Email">
-              <br>
-              <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    {{> newsletter_subscribe }}
 
-    <% include footer.handlebars %>
+    {{> footer }}
 
     <!-- app script -->
     <script src="/js/app.min.js"></script>

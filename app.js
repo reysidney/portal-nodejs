@@ -15,6 +15,8 @@ var db = mongoose.connection;
 
 //Init App
 var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
 //Init Handlebars
 var hbs = exphbs.create({
@@ -88,8 +90,18 @@ app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 
 //Set Port
-app.set('port', (process.env.PORT || 8000));
+app.set('port', (process.env.PORT || 8080));
 
-app.listen(app.get('port'), function() {
+http.listen(app.get('port'), function() {
     console.log('Server Started on port ' +app.get('port'));
 });
+
+//Whenever someone connects this gets executed
+io.on('connection', function(socket) {
+    console.log('A user connected');
+ 
+    //Whenever someone disconnects this piece of code executed
+    socket.on('disconnect', function () {
+       console.log('A user disconnected');
+    });
+ });

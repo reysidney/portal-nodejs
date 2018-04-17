@@ -11,6 +11,9 @@ This project is used for making web projects
 ## Install Bower
     npm install -g bower
 
+## Install Nodemon
+    npm install -g nodemon
+
 ## Install Dependencies
     npm install
     bower install
@@ -22,4 +25,6 @@ This project is used for making web projects
     gulp
 
 ## Run Website
-    node app.js
+    nodemon app.js
+
+Open browser @ http://localhost:8080/
